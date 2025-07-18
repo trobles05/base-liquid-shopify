@@ -1,0 +1,241 @@
+<nav>
+  <div class="conteudo">
+    <a href="/">
+      <img src="{{ 'logo.png' | asset_url }}" alt="" class="logo">
+    </a>
+    <div class="busca">
+      <div class="icone">
+        <img src="{{ 'icone-lupa.svg' | asset_url }}" >
+      </div>
+      <input type="text" placeholder="Pesquisar">
+    </div>
+    <div class="opcoes">
+      <a class="opcao" >
+        <span>Camisetas</span>
+        <img src="{{ 'icone-camiseta.svg' | asset_url }}" >
+      </a>
+      <a class="opcao" >
+        <span>Canecas</span>
+        <img src="{{ 'icone-caneca.svg' | asset_url }}" >
+      </a>
+      <a class="opcao">
+        <span>Colecionáveis</span>
+        <img src="{{ 'icone-cubo.svg' | asset_url }}" >
+      </a>
+    </div>
+    <div class="acoes">
+      <button class="conta">
+        <span>Sua conta</span>
+        <div class="icone">
+          <img src="{{ 'icone-usuario.svg' | asset_url }}" >
+        </div>
+      </button>
+      <button class="carrinho">
+        <span>Carrinho</span>
+        <div class="icone">
+          <img src="{{ 'icone-carrinho.svg' | asset_url }}" >
+        </div>
+        <div class="total">0</div>
+      </button>
+    </div>
+  </div>
+  <div class="fundo"></div>
+</nav>
+
+<style>
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  top: 20px;
+  left: 0;
+  z-index: 10;
+}
+nav .fundo {
+  position: absolute;
+  width: 100%;
+  height: 64px;
+  left: 0;
+  top: -2px;
+  background: linear-gradient(90deg, #47FD42, #141418, #47FD42);
+  z-index: 1;
+}
+nav .conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 80px;
+  height: 60px;
+  background-color: #141418;
+  z-index: 2;
+}
+nav img.logo {
+  width: 100%;
+  max-width: 180px;
+  transition: all 0.3s;
+}
+nav img.logo:hover {
+  opacity: 0.7;
+}
+nav .busca {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 350px;
+  position: relative;
+  margin: 0 0 0 20px;
+}
+nav .busca .icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ffffff10;
+  pointer-events: none;
+}
+nav .busca .icone img {
+  width: 100%;
+  max-width: 12px;
+}
+nav .busca input {
+  font-family: var(--regular);
+  font-size: var(--f2);
+  color: var(--cor-branco);
+  padding: 0 0 0 50px;
+  width: 100%;
+  height: 40px;
+  border-radius: 50px;
+  background-color: #ffffff10;
+  transition: all 0.3s;
+}
+nav .busca input::placeholder {
+  color: #ffffff70;
+}
+nav .busca input:focus {
+  background-color: #ffffff15;
+}
+nav .opcoes {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+nav .opcoes a.opcao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--regular);
+  font-size: var(--f2);
+  color: var(--cor-branco);
+  background: linear-gradient(90deg, rgba(71, 253, 66, 0.03) 49.35%, rgba(71, 253, 66, 0.05) 64.55%, rgba(71, 253, 66, 0.15) 79.74%, rgba(71, 253, 66, 0.30) 89.87%, rgba(71, 253, 66, 0.50) 100%);
+  padding: 10px 10px 10px 20px;
+  border-radius: 50px;
+  margin: 0 5px;
+  transition: all 0.3s;
+}
+nav .opcoes a.opcao:hover {
+  background-color: #ffffff22;
+}
+nav .opcoes a.opcao img {
+  width: 100%;
+  max-width: 15px;
+  margin: 0 0 0 20px;
+}
+nav .opcoes a.opcao span {
+  background: linear-gradient(90deg, #FFF 1.95%, rgba(255, 255, 255, 0.40) 91.25%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+nav .acoes {
+  display: flex;
+  align-items: center;
+}
+nav .acoes button.carrinho {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--bold);
+  font-size: var(--f2);
+  color: var(--cor-branco);
+  background-color: transparent;
+  position: relative;
+}
+nav .acoes button.carrinho:hover .icone {
+  background-color: #47FD4225;
+}
+nav .acoes button.carrinho .icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #47FD4215;
+  border-radius: 10px;
+  margin: 0 0 0 10px;
+  transition: all 0.3s;
+}
+nav .acoes button.carrinho .icone img {
+  width: 100%;
+  max-width: 20px;
+}
+nav .acoes button.carrinho div.total {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: var(--cor-preto);
+  background-color: #47FD42;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+nav .acoes button.conta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--bold);
+  font-size: var(--f2);
+  color: var(--cor-branco);
+  background-color: transparent;
+  margin: 0 15px 0 0;
+  transition: all 0.3s;
+}
+nav .acoes button.conta:hover .icone {
+  background-color: #47FD4225;
+}
+nav .acoes button.conta .icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #47FD4215;
+  border-radius: 10px;
+  margin: 0 0 0 10px;
+  transition: all 0.3s;
+}
+nav .acoes button.conta .icone img {
+  width: 100%;
+  max-width: 15px;
+}
+@media screen and (max-width: 1000px) {
+
+}
+</style>
+
+{% schema %}
+{
+  "name": "Nav",
+  "settings": []
+}
+{% endschema %}

@@ -1,0 +1,22 @@
+/* Figtree */
+@font-face {
+  font-family: 'alexandria-extrabold';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url('Alexandria-Extrabold.woff') format('woff');
+}
+@font-face {
+  font-family: 'figtree-bold';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url('Figtree-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'figtree-regular';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url('Figtree-Regular.woff') format('woff');
+}

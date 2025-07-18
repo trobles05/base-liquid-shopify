@@ -1,0 +1,21 @@
+{
+  "sections": {
+    "banner": {
+      "type": "banner",
+      "settings": {}
+    },
+    "categorias": {
+      "type": "categorias",
+      "settings": {}
+    },
+    "faixa": {
+      "type": "faixa",
+      "settings": {}
+    },
+    "opcoes": {
+      "type": "opcoes",
+      "settings": {}
+    }
+  },
+  "order": ["banner", "categorias", "opcoes", "faixa"]
+}

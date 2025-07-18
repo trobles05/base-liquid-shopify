@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+  <!-- Title and Description -->
+  <title>{{ page_title }} | {{ shop.name }}</title>
+  <meta name="description" content="{{ page_description }}">
+
+  <!-- SEO Meta Tags -->
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="max-image-preview">
+  <meta name="author" content="{{ shop.name }}">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="{{ page_title }}">
+  <meta property="og:description" content="{{ page_description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://arquivos-experience.nyc3.cdn.digitaloceanspaces.com/favicons/share.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:url" content="{{ canonical_url | default: shop.url }}">
+  <meta property="og:site_name" content="{{ shop.name }}">
+  <meta property="og:locale" content="{{ request.locale.iso_code }}">
+
+  <!-- Theme Colors -->
+  <meta name="theme-color" content="#03030E">
+  <meta name="msapplication-TileColor" content="#03030E">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <!-- Application Meta Tags -->
+  <meta name="application-name" content="{{ shop.name }}">
+  <meta name="apple-mobile-web-app-title" content="{{ shop.name }}">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="{{ 'favicon.ico' | asset_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ 'favicon-16x16.png' | asset_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ 'favicon-32x32.png' | asset_url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ 'apple-touch-icon.png' | asset_url }}">
+  <link rel="icon" type="image/png" sizes="192x192" href="{{ 'android-chrome-192x192.png' | asset_url }}">
+  <link rel="icon" type="image/png" sizes="512x512" href="{{ 'android-chrome-512x512.png' | asset_url }}">
+  <link rel="manifest" href="{{ 'site.webmanifest' | asset_url }}">
+
+  {{ 'index.css' | asset_url | stylesheet_tag }}
+  <script src="{{ 'script.js' | asset_url }}" defer></script>
+
+  <style>
+    :root {
+      --cor-branco: #ffffff;
+      --cor-preto: #000000;
+
+      --cor-cinza-1: #d2d3e1;
+      --cor-cinza-2: #57586f;
+
+      --cor-escuro-1: #03030E;
+      --cor-escuro-2: #07073c;
+      --cor-escuro-3: #2d2d63;
+      --cor-escuro-6: #bfbfc9;
+
+      --cor-marca: #2BEFCE;
+      --cor-vermelho: #f81c4c;
+
+      --degrade: #2CF2D1, #13887E;
+
+      --f0: 10px;
+      --f1: 12px;
+      --f2: 14px;
+      --f3: 18px;
+      --f4: 25px;
+      --f5: 35px;
+      --f6: 45px;
+      --f7: 60px;
+
+      --regular: 'figtree-regular';
+      --bold: 'figtree-bold';
+      --light: 'figtree-light';
+    }
+  </style>
+
+  {{ content_for_header }}
+</head>
+<body>
+  {% section 'nav' %}
+
+  <main>
+    {{ content_for_layout }}
+  </main>
+
+  {% section 'footer' %}
+
+  {% render 'alerta' %}
+  {% render 'carrinho' %}
+</body>
+</html>
