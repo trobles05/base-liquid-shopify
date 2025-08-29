@@ -1,0 +1,8 @@
+{
+  "sections": {
+    "carrinho": {
+      "type": "carrinho"
+    }
+  },
+  "order": ["carrinho"]
+}

@@ -1,21 +1,14 @@
 {
   "sections": {
-    "banner": {
-      "type": "banner",
-      "settings": {}
+    "header": {
+      "type": "header"
     },
     "categorias": {
-      "type": "categorias",
-      "settings": {}
+      "type": "categorias"
     },
-    "faixa": {
-      "type": "faixa",
-      "settings": {}
-    },
-    "opcoes": {
-      "type": "opcoes",
-      "settings": {}
+    "slide": {
+      "type": "slide"
     }
   },
-  "order": ["banner", "categorias", "opcoes", "faixa"]
+  "order": ["header", "categorias", "slide"]
 }

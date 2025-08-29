@@ -1,18 +1,15 @@
 <section class="categorias">
-
+  <div class="itens">
+    {% for collection in collections %}
+      <p>{{ collection.title }}</p>
+    {% endfor %}
+  </div>
 </section>
 
 <style>
-.categorias {
-  display: flex;
-}
-@media screen and (max-width: 1000px) {
-}
+  section.categorias {
+    display: flex;
+  }
 </style>
 
-{% schema %}
-{
-  "name": "Categorias",
-  "settings": []
-}
-{% endschema %}
+<script></script>

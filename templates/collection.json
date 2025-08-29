@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "headerCollection": {
+      "type": "headerCollection"
+    },
+    "produtos": {
+      "type": "produtos"
+    }
+  },
+  "order": ["headerCollection", "produtos"]
+}
